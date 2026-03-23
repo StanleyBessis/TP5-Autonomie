@@ -16,9 +16,9 @@ public class CoursCollectif extends Cours {
     @Override
     public double getPrix() {
         double supplement;
-        if (ageMini < 10) supplement = 12.0; // [cite: 76]
-        else if (ageMini < 20) supplement = 15.0; // [cite: 77]
-        else supplement = 17.0; // [cite: 78]
+        if (ageMini < 10) supplement = 12.0;
+        else if (ageMini < 20) supplement = 15.0;
+        else supplement = 17.0;
 
         return this.prix + supplement;
     }
