@@ -24,6 +24,6 @@ public class CoursIndividuel extends Cours {
 
     @Override
     public String getInfos() {
-        return "Numéro : " + idCours + " Instrument : " + instrument.getNomInstrument(); // [cite: 48, 65]
+        return "Numéro : " + idCours + " Instrument : " + instrument.getNomInstrument();
     }
 }
