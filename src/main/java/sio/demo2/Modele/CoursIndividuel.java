@@ -1,6 +1,9 @@
 package sio.demo2.Modele;
 
-public class CourIndividuel extends Cours {
+import sio.demo2.Modele.Cours;
+import sio.demo2.Modele.Instrument;
+
+public class CoursIndividuel extends Cours {
     private Instrument instrument;
 
     public CoursIndividuel(int id, Instrument instrument) {
@@ -9,12 +12,18 @@ public class CourIndividuel extends Cours {
     }
 
     @Override
-    public String getInfos() {
-        return "";
+    public double getPrix() {
+        double supplement = 9.0;
+        String nom = instrument.getNomInstrument().toLowerCase();
+
+        if (nom.equals("guitare")) supplement = 7.5;
+        else if (nom.equals("piano")) supplement = 10.5;
+
+        return this.prix + supplement;
     }
 
     @Override
-    public double getPrix() {
-        return 0;
+    public String getInfos() {
+        return "Numéro : " + idCours + " Instrument : " + instrument.getNomInstrument(); // [cite: 48, 65]
     }
 }
